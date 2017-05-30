@@ -400,7 +400,7 @@ func sendNotificationEmail(post *model.Post, user *model.User, channel *model.Ch
 		bodyPage.Props["TeamLink"] = teamURL
 	}
 
-	bodyPage.Props["BodyText"] = bodyText
+	bodyPage.Props["BodyText"] = ""
 	bodyPage.Props["Button"] = userLocale("api.templates.post_body.button")
 	bodyPage.Html["Info"] = template.HTML(userLocale("api.templates.post_body.info",
 		map[string]interface{}{"ChannelName": channelName, "SenderName": senderName,
